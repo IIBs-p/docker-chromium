@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv sh
+
+# Aguarda o X11 estar pronto
+while ! xdpyinfo >/dev/null 2>&1; do
+  sleep 1
+done
+
+# Inicia o teclado virtual
+exec onboard
