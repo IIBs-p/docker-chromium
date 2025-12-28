@@ -40,6 +40,14 @@ RUN \
         mesa-dri-gallium \
         mesa-va-gallium
 
+# Install virtual keyboard (Onboard) and accessibility deps.
+RUN \
+    add-pkg \
+        onboard \
+        at-spi2-core \
+        dbus \
+        dbus-x11
+
 # Generate and install favicons.
 RUN \
     APP_ICON_URL=https://github.com/jlesage/docker-templates/raw/master/jlesage/images/chromium-icon.png && \
